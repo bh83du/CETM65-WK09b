@@ -9,8 +9,9 @@
       <div class="col">
         <h2>New Employee Sign Up</h2>
         <hr>
-        <!--Action attribute set to the Flask Route.  Method Type=POST-->  
-        <form action="/sign-up" method="POST">
+        <!--Action attribute set to the Signup App Route.  Method Type=POST-->  
+        <form action="{% url 'sign-up' %}" method="POST">
+          {% csrf_token %}
 
           <div class="form-group">
             <label>Employee ID</label>

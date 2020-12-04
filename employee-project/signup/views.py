@@ -36,5 +36,5 @@ def signup(request):
 
         return redirect('/')
 
-    return render(request, "sign-up.html")
+    return render(request, "signup.html")
 
