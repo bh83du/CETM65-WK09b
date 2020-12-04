@@ -1,0 +1,72 @@
+  body {
+    background-color: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    color: green;
+  }
+
+  a {
+    color: green;
+  }
+
+  div.col {
+    background-color: rgb(193, 252, 175);
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: 2px solid green;
+    border-radius: 4px;
+  }
+
+  div.container {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 35%;
+  }
+
+  div.table {
+    background-color: rgb(193, 252, 175);
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
+    border: 15px solid green;
+    padding: 50px;
+  }
+  .styled-table {
+  border-collapse: seperate;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 0.9em;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px green;
+}
+
+.styled-table thead tr {
+  background-color: rgb(193, 252, 175);
+  color: green;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #b9e0c8;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+  background-color: #b7dfb7;
+}
