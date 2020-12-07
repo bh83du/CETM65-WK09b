@@ -5,10 +5,12 @@ from signup.models import Users
 
 
 def test(request):
+    # Easter Egg Test Page 
     return HttpResponse("Congratulations. You found the Test page")
 
-def index(request):
-    return HttpResponse("This is the Index Page")
+def data(request):
+    # This will return all records currently in the DB.
+    return HttpResponse("This is the Data Page")
 
 def signup(request):
 
@@ -34,7 +36,7 @@ def signup(request):
 
         new_user.save()
 
-        return redirect('/')
+        return redirect('\data')
 
     return render(request, "signup.html")
 

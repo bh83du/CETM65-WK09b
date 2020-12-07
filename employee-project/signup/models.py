@@ -10,10 +10,10 @@ class Users(models.Model):
     password = models.CharField(max_length=30)
 
 # Add Metadata - In this case, added to prevent
-# Django Admin pluralising Users to Users
+# Django Admin pluralising Users to Userss
 
-class Meta:
-    verbose_name_plural = "Users"
+    class Meta:
+        verbose_name_plural = "Users"
 
 # Define __str__ to be called when queried
 
