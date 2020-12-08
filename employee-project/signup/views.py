@@ -10,7 +10,8 @@ def test(request):
 
 def data(request):
     # This will return all records currently in the DB.
-    return HttpResponse("This is the Data Page")
+    all_users = Users.objects.all()
+    return render(request, 'data.html', {'all_users': all_users,})
 
 def signup(request):
 
@@ -26,17 +27,29 @@ def signup(request):
 
         print(details)
 
+        missing = list()
+
+        for k, v in details.items():
+            if v == "":
+                missing.append(k)
+
+        if missing:
+            messages.add_message(
+                request, messages.WARNING, f"Missing fields for {', '.join(missing)}")
+            return render(request, "signup.html")
+
         new_user = Users(emp_no=details["emp_no"],
                          user_name=details["user_name"],
                          dept=details["dept"],
                          email=details["email"],
                          password=details["password"])
 
+
         print(new_user)
 
         new_user.save()
 
-        return redirect('\data')
+        return redirect('/signup/data')
 
     return render(request, "signup.html")
 
